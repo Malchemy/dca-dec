@@ -30,8 +30,6 @@ func main() {
 
   for {
 	  frame, nil := decoder.OpusFrame()
-        
-          break
       }
           //case os.Stdout <- frame:
 	  os.Stdout.Write(frame)
