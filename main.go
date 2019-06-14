@@ -4,7 +4,7 @@ import (
 	"flag"
 	//"fmt"
 	"github.com/jonas747/dca"
-	//"io"
+	"io"
 	"os"
 )
 
