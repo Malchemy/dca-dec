@@ -41,7 +41,8 @@ func main() {
           break
       }
       select{
-          case os.Stdout <- frame:
+          //case os.Stdout <- frame:
+	  io.Copy(frame, os.Stdout)
           case <-time.After(time.Second):
               // We haven't been able to send a frame in a second, assume the connection is borked
               return
