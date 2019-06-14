@@ -10,8 +10,7 @@ import (
 )
 
 var (
-		InFile      string
-
+	InFile      string
 	OutFile string = "pipe:1"
 )
 
@@ -28,8 +27,10 @@ func main() {
   
   var output = os.Stdout
 
+  func Open(name string) (InFile)
+	
   // inputReader is an io.Reader, like a file for example
-  decoder := dca.NewDecoder(InFile)
+  decoder := dca.NewDecoder(inputReader)
 
   for {
       frame, err := decoder.OpusFrame()
