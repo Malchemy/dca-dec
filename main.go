@@ -10,7 +10,7 @@ import (
 
 var (
 	InFile      string
-	OutFile string = "pipe:1"
+	//OutFile string = "pipe:1"
 	err	error
 )
 
@@ -22,7 +22,7 @@ func init() {
 func main() {
 
   InFile = os.Args[1]
-  OutFile = os.Args[2]
+  //OutFile = os.Args[2]
 
   inputReader, err := os.Open(InFile)
 	
