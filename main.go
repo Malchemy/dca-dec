@@ -16,7 +16,6 @@ var (
 
 func init() {	
 	flag.StringVar(&InFile, "i", "pipe:0", "infile")
-	flag.BoolVar(&Quiet, "quiet", false, "disable stats output to stderr")
 	flag.Parse()
 }
 
