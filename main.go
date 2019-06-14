@@ -9,9 +9,21 @@ import (
 	"time"
 )
 
+var (
+		InFile      string
+
+	OutFile string = "pipe:1"
+)
+
+func init() {	
+	flag.StringVar(&InFile, "i", "pipe:0", "infile")
+	flag.BoolVar(&Quiet, "quiet", false, "disable stats output to stderr")
+	flag.Parse()
+}
+
 func main() {
 
-	InFile = os.Args[1]
+  InFile = os.Args[1]
   OutFile = os.Args[2]
   
   var output = os.Stdout
