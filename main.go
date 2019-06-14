@@ -27,7 +27,7 @@ func main() {
   
   var output = os.Stdout
 
-  func Open(name string) (InFile)
+var _ io.Reader = (*os.File)(InFile)
 	
   // inputReader is an io.Reader, like a file for example
   decoder := dca.NewDecoder(inputReader)
