@@ -40,10 +40,8 @@ func main() {
         
           break
       }
-    
-      // Do something with the frame, in this example were sending it to discord
       select{
-          case io.Copy(output) <- frame:
+          case os.Stdout <- frame:
           case <-time.After(time.Second):
               // We haven't been able to send a frame in a second, assume the connection is borked
               return
