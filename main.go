@@ -6,7 +6,6 @@ import (
 	"github.com/jonas747/dca"
 	"io"
 	"os"
-	"time"
 )
 
 var (
