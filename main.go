@@ -29,7 +29,7 @@ func main() {
   decoder := dca.NewDecoder(inputReader)
 
   for {
-	  frame, nil := decoder.OpusFrame()
+	  frame, nil = decoder.OpusFrame()
       }
           //case os.Stdout <- frame:
 	  os.Stdout.Write(frame)
