@@ -22,8 +22,6 @@ func main() {
 
   InFile = os.Args[1]
   OutFile = os.Args[2]
-  
-  var output = os.Stdout
 
   inputReader, err := os.Open(InFile)
 	
@@ -31,11 +29,7 @@ func main() {
   decoder := dca.NewDecoder(inputReader)
 
   for {
-      frame, err := decoder.OpusFrame()
-      if err != nil {
-          if err != io.EOF {
-              // Handle the error
-          }
+	  frame, nil := decoder.OpusFrame()
         
           break
       }
