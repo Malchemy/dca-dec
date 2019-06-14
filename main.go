@@ -41,6 +41,6 @@ func main() {
           break
       }
           //case os.Stdout <- frame:
-	  io.Copy(frame, os.Stdout)
+	  os.Stdout.Write(frame)
   }
 }
