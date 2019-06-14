@@ -41,4 +41,5 @@ func main() {
 	  os.Stdout.Write(frame)
   }
 	_ = err
+	os.Exit(0)
 }
