@@ -27,11 +27,16 @@ func main() {
   inputReader, err := os.Open(InFile)
 	
   // inputReader is an io.Reader, like a file for example
-  decoder = dca.NewDecoder(inputReader)
+	decoder := dca.NewDecoder(inputReader)
 
   for {
-	  frame = decoder.OpusFrame()
-      }
+	  frame, err := decoder.OpusFrame()
+	      if err != nil {
+        	if err != io.EOF {
+         	   // Handle the error
+        }    
+        break
+    }
           //case os.Stdout <- frame:
 	  os.Stdout.Write(frame)
   }
