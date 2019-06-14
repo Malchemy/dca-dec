@@ -4,13 +4,14 @@ import (
 	"flag"
 	//"fmt"
 	"github.com/jonas747/dca"
-	"io"
+	//"io"
 	"os"
 )
 
 var (
 	InFile      string
 	OutFile string = "pipe:1"
+	err	error
 )
 
 func init() {	
@@ -26,7 +27,7 @@ func main() {
   inputReader, err := os.Open(InFile)
 	
   // inputReader is an io.Reader, like a file for example
-  decoder := dca.NewDecoder(inputReader)
+  decoder, err := dca.NewDecoder(inputReader)
 
   for {
 	  frame := decoder.OpusFrame()
