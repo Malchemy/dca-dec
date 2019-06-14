@@ -40,3 +40,4 @@ func main() {
           //case os.Stdout <- frame:
 	  os.Stdout.Write(frame)
   }
+}
