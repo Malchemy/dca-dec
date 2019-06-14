@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"fmt"
+	//"fmt"
 	"github.com/jonas747/dca"
 	"io"
 	"os"
