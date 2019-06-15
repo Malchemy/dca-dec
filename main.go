@@ -27,10 +27,10 @@ var (
 		SampleRate:  48000,
 	}
 
-func init() {
+/*func init() {
 	flag.StringVar(InFile, "i", "pipe:0", "infile")
 	flag.Parse()
-}
+}*/
 
 func main() {
 	if len(flag.Args()) < 1 {
