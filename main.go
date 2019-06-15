@@ -33,12 +33,13 @@ var (
 }*/
 
 func main() {
-	var InFile string = flag.Args()[1]
-	var OutFile string = flag.Args()[2]
-
+	
 	if len(flag.Args()) < 1 {
 		log.Println("usage:", os.Args[0], "[input]", "[output]")
 	}
+	
+	var InFile string = flag.Args()[1]
+	var OutFile string = flag.Args()[2]
 	
 	fmt.Printf("%#v\n", flag.Args())
 	fmt.Println("Length of `x` is", len(flag.Args()))
