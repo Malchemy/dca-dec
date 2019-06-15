@@ -21,7 +21,7 @@ var (
 	//OutFile string = "pipe:1"
 	err error
 )
-	var format = &audio.Format {
+	var format = audio.Format {
 		NumChannels: 2,
 		SampleRate:  48000,
 	}
