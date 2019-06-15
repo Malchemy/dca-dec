@@ -17,8 +17,8 @@ import (
 )
 
 var (
-	InFile string
-	OutFile string
+	/*InFile string
+	OutFile string*/
 	//OutFile string = "pipe:1"
 	err error
 )
@@ -37,8 +37,8 @@ func main() {
 		log.Println("usage:", os.Args[0], "[input]", "[output]")
 	}
 
-	InFile = flag.Args[1]
-	OutFile = flag.Args[2]
+	InFile := flag.Args()[1]
+	OutFile := flag.Args()[2]
 	
 	fmt.Printf("%#v\n", flag.Args())
 	fmt.Println("Length of `x` is", len(flag.Args()))
