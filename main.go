@@ -4,7 +4,7 @@ import (
 	"flag"
 	"log"
 
-	//"fmt"
+	"fmt"
 	"io"
 	"os"
 
@@ -22,7 +22,7 @@ var (
 	//OutFile string = "pipe:1"
 	err error
 )
-	format = &audio.Format {
+	var format = &audio.Format {
 		NumChannels: 2,
 		SampleRate:  48000,
 	}
@@ -36,6 +36,7 @@ func main() {
 	if len(flag.Args()) < 1 {
 		log.Println("usage:", os.Args[0], "[input]", "[output]")
 	}
+	log.Println(flag.Args())
 
 	InFile = flag.Args()[1]
 	OutFile = flag.Args()[2]
