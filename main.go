@@ -36,7 +36,7 @@ func main() {
 	if len(flag.Args()) < 1 {
 		log.Println("usage:", os.Args[0], "[input]", "[output]")
 	}
-	Printf("%#v", flag.Args())
+	log.Printf("%#v", flag.Args())
 
 	InFile = flag.Args()[1]
 	OutFile = flag.Args()[2]
