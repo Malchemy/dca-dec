@@ -19,12 +19,13 @@ var (
 	//OutFile string = "pipe:1"
 	err error
 
+
+)
 	//format = &audio.Format{
 	format = *audio.Format {
 		NumChannels: 2,
 		SampleRate:  48000,
 	}
-)
 
 func init() {
 	flag.StringVar(&InFile, "i", "pipe:0", "infile")
