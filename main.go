@@ -34,9 +34,9 @@ var (
 
 func main() {
 	
-	if len(os.Args[]) < 3 {
+	/*if len(os.Args) < 3 {
 		log.Println("usage:", os.Args[0], "[input]", "[output]")
-	}
+	}*/
 	
 	InFile := os.Args[1]
 	OutFile := os.Args[2]
