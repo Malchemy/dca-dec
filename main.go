@@ -33,8 +33,8 @@ var (
 }*/
 
 func main() {
-	InFile := flag.Args()[1]
-	OutFile := flag.Args()[2]
+	var InFile string = flag.Args()[1]
+	var OutFile string = flag.Args()[2]
 
 	if len(flag.Args()) < 1 {
 		log.Println("usage:", os.Args[0], "[input]", "[output]")
