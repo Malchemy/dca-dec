@@ -2,8 +2,6 @@ package main
 
 import (
 	"log"
-
-	//"fmt"
 	"io"
 	"os"
 
