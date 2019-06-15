@@ -71,8 +71,8 @@ func main() {
 	}
 
 	encoder := wav.NewEncoder(
-		format.SampleRate, 16, format.NumChannels, 1,
 		outputWriter,
+		format.SampleRate, 16, format.NumChannels, 1,
 	)
 
 	defer encoder.Close()
