@@ -28,7 +28,7 @@ var (
 	}
 
 func init() {
-	flag.StringVar(&InFile, "i", "pipe:0", "infile")
+	flag.StringVar(InFile, "i", "pipe:0", "infile")
 	flag.Parse()
 }
 
