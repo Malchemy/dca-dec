@@ -17,13 +17,10 @@ import (
 var (
 	InFile string
 	OutFile string
-	wav
-	audio.IntBuffer
 	//OutFile string = "pipe:1"
 	err error
 )
-	//format = &audio.Format{
-	format = *audio.Format {
+	var format = &audio.Format {
 		NumChannels: 2,
 		SampleRate:  48000,
 	}
