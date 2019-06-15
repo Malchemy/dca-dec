@@ -1,6 +1,6 @@
 # dca-dec
 
-This package uses https://github.com/jonas747/dca to convert DCA files into WAV files.
+This package uses jonas747's (https://github.com/jonas747/dca) implementation of DCA to convert DCA files into WAV files.
 
 To install:
 go get github.com/Malchemy/dca-dec
