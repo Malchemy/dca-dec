@@ -34,16 +34,12 @@ var (
 
 func main() {
 	
-	if len(flag.Args()) < 1 {
+	if len(flag.Args()) < 3 {
 		log.Println("usage:", os.Args[0], "[input]", "[output]")
 	}
 	
-	//InFile := os.Args[1]
-	//OutFile := os.Args[2]
-	
-	fmt.Printf("%#v\n", flag.Args())
-	fmt.Println("Length of `x` is", len(flag.Args()))
-	fmt.Println("Third element of `x` is", flag.Args()[2])
+	InFile := os.Args[1]
+	OutFile := os.Args[2]
 
 	// Open the file
 	inputReader, err := os.Open(InFile)
