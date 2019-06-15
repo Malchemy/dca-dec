@@ -59,7 +59,7 @@ func main() {
 	// Make a new decoder
 	decoder := dca.NewDecoder(inputReader)
 
-	var _ pcm []int16
+	var pcm []int16
 
 	opusDecoder, err := gopus.NewDecoder(
 		format.SampleRate,  // sampling rate
@@ -109,4 +109,5 @@ func main() {
 			panic(err)
 		}
 	}
+	_ = pcm
 }
