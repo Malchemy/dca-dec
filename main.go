@@ -7,7 +7,7 @@ import (
 
 	"github.com/go-audio/audio"
 	"github.com/go-audio/wav"
-	"github.com/jonas747/dca"
+	"github.com/Malchemy/dca"
 	"layeh.com/gopus"
 )
 
