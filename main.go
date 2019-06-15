@@ -8,7 +8,8 @@ import (
 	"io"
 	"os"
 
-	"engo.io/audio"
+	github.com/EngoEngine/engo
+	//"engo.io/audio"
 	"github.com/jonas747/dca"
 	"layeh.com/gopus"
 )
