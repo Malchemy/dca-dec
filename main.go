@@ -1,17 +1,10 @@
 package main
 
 import (
-	"flag"
-	"log"
-
-	"fmt"
 	"io"
 	"os"
-
 	"github.com/go-audio/wav"
 	"github.com/go-audio/audio"
-	//"github.com/Malchemy/audio"
-	//"engo.io/audio"
 	"github.com/jonas747/dca"
 	"layeh.com/gopus"
 )
