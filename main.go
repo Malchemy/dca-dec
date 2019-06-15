@@ -1,36 +1,33 @@
 package main
 
 import (
+	"log"
+
+	//"fmt"
 	"io"
 	"os"
-	"github.com/go-audio/wav"
+
 	"github.com/go-audio/audio"
+	"github.com/go-audio/wav"
 	"github.com/jonas747/dca"
 	"layeh.com/gopus"
 )
 
 var (
-	/*InFile string
-	OutFile string*/
-	//OutFile string = "pipe:1"
-	err error
-)
-	var format = &audio.Format {
+	args []string
+
+	format = &audio.Format{
 		NumChannels: 2,
 		SampleRate:  48000,
 	}
-
-/*func init() {
-	flag.StringVar(InFile, "i", "pipe:0", "infile")
-	flag.Parse()
-}*/
+)
 
 func main() {
-	
-	/*if len(os.Args) < 3 {
-		log.Println("usage:", os.Args[0], "[input]", "[output]")
-	}*/
-	
+	log.SetFlags(0)
+	if len(os.Args) < 3 {
+		log.Fatalln("usage:", os.Args[0], "[input]", "[output]")
+	}
+
 	InFile := os.Args[1]
 	OutFile := os.Args[2]
 
@@ -41,19 +38,17 @@ func main() {
 	}
 
 	// Close the file on finish
-	//defer inputReader.Close()
+	defer inputReader.Close()
 
-	outputWriter, err := os.OpenFile(OutFile, os.O_WRONLY, os.ModePerm)
+	outputWriter, err := os.OpenFile(OutFile, os.O_WRONLY|os.O_CREATE, os.ModePerm)
 	if err != nil {
 		panic(err)
 	}
 
-	//defer outputWriter.Close()
+	defer outputWriter.Close()
 
 	// Make a new decoder
 	decoder := dca.NewDecoder(inputReader)
-
-	var pcm []int16
 
 	opusDecoder, err := gopus.NewDecoder(
 		format.SampleRate,  // sampling rate
@@ -103,5 +98,4 @@ func main() {
 			panic(err)
 		}
 	}
-	_ = pcm
 }
