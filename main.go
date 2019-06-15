@@ -47,14 +47,14 @@ func main() {
 	}
 
 	// Close the file on finish
-	defer inputReader.Close()
+	//defer inputReader.Close()
 
 	outputWriter, err := os.OpenFile(OutFile, os.O_WRONLY, os.ModePerm)
 	if err != nil {
 		panic(err)
 	}
 
-	defer outputWriter.Close()
+	//defer outputWriter.Close()
 
 	// Make a new decoder
 	decoder := dca.NewDecoder(inputReader)
