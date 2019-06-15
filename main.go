@@ -21,7 +21,7 @@ func init() {
 
 func main() {
 
-  InFile = os.Args[1]
+  InFile = flag.Args()[1]
   //OutFile = os.Args[2]
 
   inputReader, err := os.Open(InFile)
