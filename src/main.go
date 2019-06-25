@@ -1,4 +1,4 @@
-package dca-dec
+package main
 
 import (
 	"log"
