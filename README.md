@@ -1,5 +1,5 @@
 ### dca-dec
-* dca is an audio format usually comprised of opus packets with json metadata
+* DCA is an audio format usually comprised of opus packets with json metadata
 * This package uses jonas747's (https://github.com/jonas747/dca) implementation of DCA to convert DCA files into WAV files.
 
 <br /><br />
