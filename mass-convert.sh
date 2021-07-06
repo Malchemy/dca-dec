@@ -6,7 +6,7 @@
 # dca-dec must be in $PATH
 for FILE in *.dca
 {
-   dca-dec ${FILE} "$(basename "${FILE}" .dca).wav"
+   dca-dec ${FILE} "$(basename "${FILE}").wav"
 }
 
 # Comment out the top and use these lines if you'd rather have dca-dec
