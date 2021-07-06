@@ -6,12 +6,12 @@
 # dca-dec must be in $PATH
 for FILE in *.dca
 {
-   dca-dec ${FILE} "$(basename "${FILE}").wav"
+   dca-dec ${FILE} "${FILE%%.*}.wav"
 }
 
 # Comment out the top and use these lines if you'd rather have dca-dec
 # in the current folder instead of $PATH or just add ./ in front of dca-dec above..
 #for FILE in *.dca
 #{
-#   ./dca-dec ${FILE} "$(basename "${FILE}" .dca).wav"
+#   ./dca-dec ${FILE} "${FILE%%.*}.wav"
 #}
